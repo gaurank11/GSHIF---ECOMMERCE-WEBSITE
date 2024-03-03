@@ -1,0 +1,425 @@
+<!DOCTYPE html>  
+ <html lang="en">  
+ <head>  
+   <meta charset="UTF-8">  
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+   <title>Cold Drink</title>  
+
+   <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  background: black;
+}
+
+.heading ul {
+  display: flex;
+}
+
+.logo a {
+  color: white;
+  transition-duration: 1s;
+  font-weight: 800;
+}
+
+.logo a:hover {
+  color: rgb(240, 197, 6);
+  transition-duration: 1s;
+}
+
+.heading ul li {
+  list-style: none;
+}
+
+.heading ul li a {
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  position: relative;
+  color: white;
+  margin: 2px 14px;
+  font-size: 18px;
+  transition-duration: 1s;
+}
+
+.heading ul li a:active {
+  color: red;
+}
+
+.heading ul li a:hover {
+  color: rgb(243, 168, 7);
+  transition-duration: 1s;
+}
+
+.heading ul li a::before {
+  content: '';
+  height: 2px;
+  width: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  transition-duration: 1s;
+}
+
+.heading ul li a:hover::before {
+  width: 100%;
+  transition-duration: 1s;
+  background-color: rgb(243, 168, 7);
+}
+
+#input {
+  height: 30px;
+  width: 300px;
+  text-decoration: none;
+  border: 0px;
+  padding: 5px;
+}
+
+.logo a {
+  color: white;
+  font-size: 35px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+ion-icon {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: black;
+}
+
+ion-icon:hover {
+  cursor: pointer;
+}
+
+.search a {
+  display: flex;
+}
+
+header a ion-icon {
+  position: relative;
+  right: 3px;
+}
+    .section2 .container{  
+ display:flex;  
+ width:100%;  
+ height:max-content;  
+ flex-wrap: wrap;  
+ justify-content:center;  
+ margin:10px auto;  
+}  
+.section2 .container .items{  
+margin: 10px;  
+width:200px;  
+height: 300px;  
+background-color:white;  
+border:2.5px solid black;  
+border-radius: 12px;  
+}  
+.section2 .container .items .name{  
+text-align:center;  
+background-color:rgb(240, 197, 6);  
+height:25px;  
+padding-top:4px;  
+color:white;  
+margin: 0;  
+}  
+.section2 .container .items .price{  
+float:left;  
+padding-left:10px;  
+display: block;  
+width:100%;  
+color:rgb(255, 0, 0);  
+font-weight: 650;  
+}  
+.section2 .container .items .info{  
+  padding-left:10px;  
+  color:rgb(243, 168, 7);  
+}  
+.section2 .container .items .img img{  
+width:200px;  
+height:200px;  
+margin: 0;  
+padding: 0;  
+border-radius:12px;  
+transition-duration:0.8s;  
+}  
+.section2 .container .items .img {  
+  overflow: hidden;  
+margin: 0;  
+}  
+.section2 .container .items:hover .img img{  
+  transform: scale(1.2);  
+       transition-duration:0.8s;  
+ border-radius:12px;  
+}  
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-items: center;
+  color: white;
+}
+
+.footer1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 15px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.social-media a {
+  color: white;
+  margin: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: white;
+}
+
+.social-media a ion-icon {
+  color: white;
+  background-color: black;
+}
+
+.social-media a:hover ion-icon {
+  color: red;
+  transform: translateY(5px);
+}
+
+.footer2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+
+.footer0 {
+  font-weight: 1200;
+  transition-duration: 1s;
+}
+
+.footer0:hover {
+  color: rgb(243, 168, 7);
+}
+
+.footer2 .heading {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.footer3 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer2 .heading:hover {
+  color: rgb(243, 168, 7);
+}
+
+.footer2 .div:hover {
+  transform: scale(1.05);
+}
+
+.footer3 h4 {
+  margin: 0 10px;
+}
+
+.footer2 div {
+  margin: 10px;
+}
+
+.menu {
+  visibility: hidden;
+}
+
+.heading1 .ham:active {
+  color: red;
+}
+
+.items {
+  overflow: hidden;
+}
+
+.ham,
+.close {
+  cursor: pointer;
+}
+</style>
+   
+ </head>  
+
+ <body>  
+   <header>  
+     <div class="logo"><a href="#">GSHIF</a></div>  
+     <div class="menu">  
+       <a href=""><ion-icon name="close" class="close"></ion-icon></a>  
+       <ul>  
+         <li><a href="#" class="under">HOME</a></li>  
+         <li><a href="#" class="under">MYCART</a></li>  
+         <li><a href="#sec2" class="under">OUR PRODUCTS</a></li> 
+         <li><a href="#" class="under">CONTACT US</a></li>  
+         <li><a href="#about" class="under">ABOUT US</a></li> 
+
+       </ul>  
+     </div>  
+     <div class="search">  
+       <a href=""><input type="text" placeholder="search products" id="input">  
+         <ion-icon class="s" name="search"></ion-icon>  
+       </a>  
+     </div>  
+     <div class="heading">  
+       <ul>  
+         <li><a href="\php_practice\Homepage\Home.php" class="under">HOME</a></li>  
+         <li><a href="#" class="under">MY CART</a></li>  
+         <li><a href="#sec2" class="under">OUR PRODUCTS</a></li>  
+         <li><a href="#" class="under">CONTACT US</a></li>  
+         <li><a href="#about" class="under">ABOUT US</a></li>  
+       </ul>  
+     </div>  
+     <div class="heading1">  
+       <ion-icon name="menu" class="ham"></ion-icon>  
+     </div>  
+   </header>  
+
+       <div class="section2" id="sec2">  
+        <div class="heading"><h1>Product Categories</h1></div>
+         <div class="container"> 
+            
+           <div class="items">  
+             <div class="img img1"><img  
+                 src="https://m.media-amazon.com/images/I/71YBmiSj-cL._SX522_.jpg"  
+                 alt=""></div>  
+             <div class="name">Coca-cola</div>  
+             <div class="price">Rs.70/1.2L</div>  
+             <div class="info">Coke</div>  
+           </div>  
+         
+           <div class="items">  
+             <div class="img img2"><img  
+                 src="https://www.towntokri.com/wp-content/uploads/2020/08/mountain-dew-1-ltr.jpg"  
+                 alt=""></div>  
+             <div class="name">Mountain dew</div>  
+             <div class="price">Rs.65/1.2L</div>  
+             <div class="info">Coke</div>  
+           </div>  
+           <div class="items">  
+             <div class="img img3"><img  
+                 src="https://www.bigbasket.com/media/uploads/p/xxl/265699_2-frooti-drink-fresh-n-juicy-mango.jpg"  
+                 alt=""></div>  
+             <div class="name">Frooti</div>  
+             <div class="price">Rs.70/1.2L</div>  
+             <div class="info">Coke</div>  
+           </div>  
+           <div class="items">  
+             <div class="img img1"><img  
+                 src="https://www.bigbasket.com/media/uploads/p/xxl/265702-8_1-sprite-soft-drink-lime-flavoured.jpg"  
+                 alt=""></div>  
+             <div class="name">Sprite</div>  
+             <div class="price">Rs.70/1.2L</div>  
+             <div class="info">Coke</div>  
+           </div>  
+           <div class="items">  
+             <div class="img img1"><img  
+                 src="https://m.media-amazon.com/images/I/61E28l8RSsL._SX522_.jpg"  
+                 alt=""></div>  
+             <div class="name">Redbull</div>  
+             <div class="price">Rs.120/250ml</div>  
+             <div class="info">Coke</div>  
+           </div>  
+           <div class="items">  
+             <div class="img img1"><img  
+                 src="https://www.bigbasket.com/media/uploads/p/xxl/40113908_5-sting-energy-drink.jpg"  
+                 alt=""></div>  
+             <div class="name">Sting</div>  
+             <div class="price">Rs.20/250ml</div>  
+             <div class="info">Energy drink</div>  
+           </div>  
+          
+         </div>  
+       </div>  
+     </div>  
+   </section>  
+   
+   <footer>  
+     <div class="footer0">  
+       <h1> GSHIF</h1>  
+     </div>  
+     <div class="footer1 ">  
+       Connect with us at<div class="social-media">  
+         <a href="#">  
+           <ion-icon name="logo-facebook"></ion-icon>  
+         </a>  
+         <a href="#">  
+           <ion-icon name="logo-linkedin"></ion-icon>  
+         </a>  
+         <a href="#">  
+           <ion-icon name="logo-youtube"></ion-icon>  
+         </a>  
+         <a href="#">  
+           <ion-icon name="logo-instagram"></ion-icon>  
+         </a>  
+         <a href="#">  
+           <ion-icon name="logo-twitter"></ion-icon>  
+         </a>  
+       </div>  
+     </div>  
+     <div class="footer2">  
+       <div class="product" id="about">  
+         <div class="heading">About US</div>  
+         <div class="div">G-SHIF is a service provider.<br>
+           Connects Peoples with many<br>
+            other platforms.....</div>  
+         
+       </div>  
+       <div class="services">  
+         <div class="heading">Services</div>  
+         <div class="div">Menus</div>  
+         <div class="div">Privacy Policy</div>  
+         <div class="div">Others</div>  
+       </div>  
+       <div class="Company">  
+         <div class="heading">Help Centre</div>  
+         <div class="div">Complaint</div>  
+         <div class="div">Information</div> 
+         <div class="div">Support</div>  
+       </div>  
+       <div class="Contact Us">  
+         <div class="heading">Contact Us</div>  
+         <div class="div">+91 9305819089</div>  
+         <div class="div">gshif05@gmail.com</div>  
+
+       </div>  
+     </div>  
+     <div class="footer3">Copyright © <h4>GSHIF</h4> 2022</div>  
+   </footer>  
+   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>  
+   <script src="./ecommerce.js"></script>  
+ </body>  
+ </html>
